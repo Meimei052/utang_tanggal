@@ -125,10 +125,9 @@
                 <li>Setiap pemain akan mendapatkan 1 soal ketika menempati tiap kotak.</li>
                 <li>1 kotak terdapat 3 soal yang berbeda.</li>
                 <li>Kotak berjumlah 50.</li>
-                <li>Waktu untuk menyelesaikan soal yaitu 5 menit.</li>
-                <li>Jika pemain dapat menyelesaikan soal, pemain tersebut berhak mendapat 5 point dan jika pemain tidak
-                    dapat menyelesaikan soal, maka pemain tidak mendapat point.</li>
-                <li>Permainan dikatakan selesai jika salah satu pemain telah menyelesaikan 50 kotak.</li>
+                <li>Waktu untuk menyelesaikan soal yaitu 3 menit.</li>
+                <li>Jika pemain dapat menyelesaikan soal dengan jawaban benar maka akan mendapatkan poin 5, sedangkan pemain menjawab dengan jawaban salah maka akan berkurang poin 3.tersebut berhak mendapat 5 point dan jika pemain tidak.</li>
+                <li>Permainan dikatakan selesai jika salah satu pemain telah mencapai Finish.</li>
             </ol>
         </span>
     </div>
@@ -147,7 +146,7 @@
     </div> -->
 
     <!-- Modal -->
-    <div class="modal fade" id="modalSoal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalSoal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -161,6 +160,40 @@
                         <button class="btn btn-success" onclick="prosesJawab('C')">C</button>
                         <button class="btn btn-success" onclick="prosesJawab('D')">D</button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="modalBenar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Horeyy</h1>
+                </div>
+                <div class="modal-body">
+                    <center style="font-size: 3em;">🎉</center>
+                    <h4 class="text-center">Jawaban Anda Benar. Poin Anda Tambah 5</h4>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalSalah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Oopss</h1>
+                </div>
+                <div class="modal-body">
+                    <center style="font-size: 3em;">☹️</center>
+                    <h4 class="text-center">Jawaban Anda Salah. Poin Anda berkurang 3.</h4>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                 </div>
             </div>
         </div>

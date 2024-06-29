@@ -20,7 +20,10 @@ var posisi_player_number_sementara = []
 var poin_player = [
     0,
     0,
-    0
+    0,
+    0,
+    0,
+    0,
 ]
 var turn_sekarang = 0
 const jawaban = {
@@ -225,7 +228,7 @@ dice_audio.onended = function() {
     }
 }
 
-var percobaan_ke = 0
+var percobaan_ke = 1
 $('#random-dice').click(function() {
     $('#roll').attr('checked', true);
     $(this).attr('disabled', true);
@@ -461,20 +464,21 @@ function openQuestionModal(player) {
     isQuestionModalOpen = true;
 }
 
-function kirimJawaban() {
-    
-}
-
 function prosesJawab(jawab) {
     // sembunyikan modal
     $('#modalSoal').modal('hide')
     console.log(posisi_player_number_sementara, turn_sekarang)
+    var ts = (turn_sekarang == 3) ? 2 : turn_sekarang
 
     if (jawab == jawaban[posisi_player_number_sementara[0]+'_'+posisi_player_number_sementara[1]]) {
-        poin_player[turn_sekarang] += 5
-        $('#point-'+(turn_sekarang+1)).text(poin_player[turn_sekarang])
+        $('#modalBenar').modal('show');
+        poin_player[ts] += 5
+        console.log(poin_player[ts])
+        $('#point-'+(ts+1)).text(poin_player[ts])
     } else {
-        poin_player[turn_sekarang] -= 3
-        $('#point-'+(turn_sekarang+1)).text(poin_player[turn_sekarang])
+        $('#modalSalah').modal('show');
+        poin_player[ts] -= 3
+        console.log(poin_player[ts])
+        $('#point-'+(ts+1)).text(poin_player[ts])
     }
 }

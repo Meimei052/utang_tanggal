@@ -1,0 +1,48 @@
+#board {
+    max-width: 950px;
+    max-height: 600px;
+    width: 80vw;
+    height: 50,52624vw;
+}
+
+#board .ficha {
+    position: absolute;
+    /* width: 6px;
+    height: 40px; */
+    overflow: visible;
+    bottom: 0;
+    left: -30px;
+    transition: all 0.5s;
+    transform: translate(25px, -11px);
+    -webkit-transform: translate(25px, -11px);
+    border: none;
+    font-size: 5vw;
+    z-index: 3;
+}
+
+.player-wrapper {
+    width: 18vw;
+}
+
+.red {
+    background-color: rgba(0,0,0,0) !important;
+    color: red ;
+}
+
+
+.blue {
+    background-color: rgba(0,0,0,0) !important;
+    color: blue ;
+}
+.purple {
+    background-color: rgba(0,0,0,0) !important;
+    color: purple ;
+}
+
+body {
+    overflow-y: auto !important;
+}
+
+.dice-wrapper {
+    width: 100%;
+}
